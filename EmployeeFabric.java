@@ -19,16 +19,30 @@ public class EmployeeFabric {
         return new Freelancer(surnames[random.nextInt(surnames.length)], names[random.nextInt(names.length)], hourlyRate, age);
     }
 
+    public static Employee generateContractor() {
+        String[] names = {"Анатолий", "Глеб", "Сергей", "Иван", "Петр"};
+        String[] surnames = {"Иванов", "Петров", "Сидоров", "Захаров", "Рогов"};
+        double monthlyRate = 1000 + random.nextInt(5000); // Примерная месячная ставка
+        int age = 18 + random.nextInt(43); // Возраст от 18 до 60 лет
+        return new Contractor(surnames[random.nextInt(surnames.length)], names[random.nextInt(names.length)], monthlyRate, age);
+    }
+
     public static Employee[] generateEmployees(int count) {
         Employee[] employees = new Employee[count];
         for (int i = 0; i < count; i++) {
-            if (random.nextBoolean()) {
-                employees[i] = generateWorker();
-            } else {
-                employees[i] = generateFreelancer();
+            int type = random.nextInt(3); // Теперь есть 3 типа: 0 для Worker, 1 для Freelancer, 2 для Contractor
+            switch (type) {
+                case 0:
+                    employees[i] = generateWorker();
+                    break;
+                case 1:
+                    employees[i] = generateFreelancer();
+                    break;
+                case 2:
+                    employees[i] = generateContractor();
+                    break;
             }
         }
         return employees;
     }
 }
-

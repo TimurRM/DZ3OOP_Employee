@@ -36,6 +36,23 @@ public class Program {
         for (Employee employee : employees) {
             System.out.println(employee);
         }
+
+        int workersCount = 0, freelancersCount = 0, contractorsCount = 0;
+        for (Employee employee : employees) {
+            if (employee instanceof Worker) {
+                workersCount++;
+            } else if (employee instanceof Freelancer) {
+                freelancersCount++;
+            } else if (employee instanceof Contractor) {
+                contractorsCount++;
+            }
+        }
+
+        System.out.println("\nОбщее количество сотрудников: " + employees.length);
+        System.out.println("Количество работников: " + workersCount);
+        System.out.println("Количество фрилансеров: " + freelancersCount);
+        System.out.println("Количество контрактников: " + contractorsCount);
     }
 }
+
 
