@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class EmployeeFabric {
-    private static Random random = new Random();
+    public static Random random = new Random();
 
     public static Worker generateWorker() {
         String[] names = {"Анатолий", "Глеб", "Сергей", "Иван", "Петр"};
