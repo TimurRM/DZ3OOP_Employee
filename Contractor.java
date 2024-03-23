@@ -1,5 +1,5 @@
 public class Contractor extends Employee {
-    private double monthlyRate;
+    public double monthlyRate;
 
     public Contractor(String surName, String name, String middleName, double monthlyRate, int age) {
         super(surName, name, middleName, monthlyRate, age); // Используйте monthlyRate как зарплату для упрощения

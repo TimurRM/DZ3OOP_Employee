@@ -1,5 +1,5 @@
 public class Freelancer extends Employee {
-    private double hourlyRate;
+    public double hourlyRate;
 
     public Freelancer(String surName, String name, String middleName, double hourlyRate, int age) {
         super(surName, name, middleName, 0, age); // Зарплата устанавливается в 0, так как рассчитывается по-другому
