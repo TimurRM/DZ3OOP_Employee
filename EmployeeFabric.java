@@ -9,7 +9,7 @@ public class EmployeeFabric {
         String[] surnames = {"Иванов", "Петров", "Сидоров", "Захаров", "Рогов"};
         int salary = random.nextInt(50000) + 50000; // Заработная плата от 50,000 до 100,000
         int age = 18 + random.nextInt(43); // Возраст от 18 до 60 лет
-        return new Worker(surnames[random.nextInt(surnames.length)], middleNames[random.nextInt(middleNames.length)], names[random.nextInt(names.length)], salary, age);
+        return new Worker(surnames[random.nextInt(surnames.length)], names[random.nextInt(names.length)], middleNames[random.nextInt(middleNames.length)], salary, age);
     }
 
     public static Freelancer generateFreelancer() {
@@ -18,7 +18,7 @@ public class EmployeeFabric {
         String[] surnames = {"Иванов", "Петров", "Сидоров", "Захаров", "Рогов"};
         double hourlyRate = 100 + random.nextInt(50); // Почасовая ставка от 100 до 150
         int age = 18 + random.nextInt(43);
-        return new Freelancer(surnames[random.nextInt(surnames.length)], middleNames[random.nextInt(middleNames.length)], names[random.nextInt(names.length)], hourlyRate, age);
+        return new Freelancer(surnames[random.nextInt(surnames.length)], names[random.nextInt(names.length)], middleNames[random.nextInt(middleNames.length)], hourlyRate, age);
     }
 
     public static Employee generateContractor() {
@@ -27,7 +27,7 @@ public class EmployeeFabric {
         String[] surnames = {"Иванов", "Петров", "Сидоров", "Захаров", "Рогов"};
         double monthlyRate = 1000 + random.nextInt(5000); // Примерная месячная ставка
         int age = 18 + random.nextInt(43); // Возраст от 18 до 60 лет
-        return new Contractor(surnames[random.nextInt(surnames.length)], middleNames[random.nextInt(middleNames.length)], names[random.nextInt(names.length)], monthlyRate, age);
+        return new Contractor(surnames[random.nextInt(surnames.length)], names[random.nextInt(names.length)], middleNames[random.nextInt(middleNames.length)], monthlyRate, age);
     }
 
     public static Employee[] generateEmployees(int count) {
