@@ -9,8 +9,8 @@ public class Program {
             System.out.println(employee);
         }
 
-        // Сортировка по имени и фамилии
-        System.out.println("\nСотрудники после сортировки по имени и фамилии:");
+        // Сортировка по ФИО
+        System.out.println("\nСотрудники после сортировки по ФИО:");
         Arrays.sort(employees);
         for (Employee employee : employees) {
             System.out.println(employee);

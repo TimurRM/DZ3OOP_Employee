@@ -1,6 +1,6 @@
 public class Worker extends Employee {
-    public Worker(String surName, String name, double salary, int age) {
-        super(surName, name, salary, age);
+    public Worker(String surName, String name, String middleName, double salary, int age) {
+        super(surName, name, middleName, salary, age);
     }
 
     @Override
@@ -10,8 +10,8 @@ public class Worker extends Employee {
 
     @Override
     public String toString() {
-        return String.format("%s %s, Возраст: %d, Заработная плата: %.2f (Работник)",
-                surName, name, age, calculateSalary());
+        return String.format("%s %s %s, Возраст: %d, Заработная плата: %.2f (Работник)",
+                surName, name, middleName, age, calculateSalary());
     }
 }
 

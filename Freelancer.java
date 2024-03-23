@@ -1,8 +1,8 @@
 public class Freelancer extends Employee {
     private double hourlyRate;
 
-    public Freelancer(String surName, String name, double hourlyRate, int age) {
-        super(surName, name, 0, age);
+    public Freelancer(String surName, String name, String middleName, double hourlyRate, int age) {
+        super(surName, name, middleName, 0, age); // Зарплата устанавливается в 0, так как рассчитывается по-другому
         this.hourlyRate = hourlyRate;
     }
 
@@ -13,8 +13,8 @@ public class Freelancer extends Employee {
 
     @Override
     public String toString() {
-        return String.format("%s %s, Возраст: %d, Почасовая ставка: %.2f, Среднемесячная зарплата: %.2f (Фрилансер)",
-                surName, name, age, hourlyRate, calculateSalary());
+        return String.format("%s %s %s, Возраст: %d, Почасовая ставка: %.2f, Среднемесячная зарплата: %.2f (Фрилансер)",
+                surName, name, middleName, age, hourlyRate, calculateSalary());
     }
 }
 

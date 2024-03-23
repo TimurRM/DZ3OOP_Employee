@@ -1,12 +1,14 @@
 public abstract class Employee implements Comparable<Employee> {
     protected String name;
+    protected String middleName;
     protected String surName;
     protected double salary;
     protected int age; // Добавленный возраст
 
-    public Employee(String surName, String name, double salary, int age) {
+    public Employee(String surName, String name, String middleName, double salary, int age) {
         this.surName = surName;
         this.name = name;
+        this.middleName = middleName;
         this.salary = salary;
         this.age = age;
     }
