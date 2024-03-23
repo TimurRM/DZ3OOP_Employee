@@ -9,6 +9,13 @@ public class Program {
             System.out.println(employee);
         }
 
+        // Сортировка по имени и фамилии
+        System.out.println("\nСотрудники после сортировки по имени и фамилии:");
+        Arrays.sort(employees);
+        for (Employee employee : employees) {
+            System.out.println(employee);
+        }
+
         // Сортировка по возрасту
         System.out.println("\nСотрудники после сортировки по возрасту:");
         Arrays.sort(employees, new AgeComparator());
