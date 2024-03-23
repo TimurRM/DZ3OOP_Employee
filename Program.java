@@ -23,7 +23,7 @@ public class Program {
             System.out.println(employee);
         }
 
-        // Сортировка по зарплате, если требуется
+        // Сортировка по зарплате
         System.out.println("\nСотрудники после сортировки по зарплате:");
         Arrays.sort(employees, new SalaryComparator());
         for (Employee employee : employees) {
